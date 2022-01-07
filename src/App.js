@@ -3,16 +3,7 @@ import { nanoid } from 'nanoid';
 import Todo from "./components/Todo";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
-
-
-function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => {
-        ref.current = value;
-    });
-
-    return ref.current;
-}
+import { usePrevious } from './stateHelperFunctions';
 
 /* Note on FILTER_MAP & FILTER_NAME:
  * Defined outside App() because if not they would be recalculated
